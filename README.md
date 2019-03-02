@@ -1,6 +1,6 @@
-#  Arduino 2.4 TFT ILI9341 LCD Converted for STM32F013RE 
+#  Arduino 2.4 TFT ILI9341 LCD Converted for STM32F103RE 
  
-It is based on one Arduino 2.4 TFT ILI9341 LCD Converted for STM32F013RE in KEIL Software for working with Touch screen library with X Y and Z (pressure) readings as well.
+It is based on one Arduino 2.4 TFT ILI9341 LCD Converted for STM32F103RE in KEIL Software for working with Touch screen library with X Y and Z (pressure) readings as well.
 SO you could see some information about this filed in this link:
 
 [electronics.stackexchange Page](https://electronics.stackexchange.com/questions/424146/touch-pins-of-tft-2-4-ili9341-touch-funtion-in-keil-for-arm-mcu?noredirect=1#comment1053882_424146)
@@ -8,7 +8,7 @@ SO you could see some information about this filed in this link:
 
 The LCD Runing Photo:
 
-*![Alt text](http://i65.tinypic.com/294o3ld.jpg  " Arduino 2.4 TFT ILI9341 LCD Converted for STM32F013RE ")
+*![Alt text](http://i65.tinypic.com/294o3ld.jpg  " Arduino 2.4 TFT ILI9341 LCD Converted for STM32F103RE ")
 
 Usage
 -----
