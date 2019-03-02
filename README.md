@@ -18,7 +18,8 @@ To get your custom, you have to do the following:
 
 1. Go to `Touchscreen.c` in main Folder AND change LCD Ports in `#define` parts if is deffent by this setting:
 
-	```#define Set_Cs  	   GPIO_SetBits(GPIOC,GPIO_Pin_3);
+	```
+	#define Set_Cs  	   GPIO_SetBits(GPIOC,GPIO_Pin_3);
 	#define Clr_Cs  	   GPIO_ResetBits(GPIOC,GPIO_Pin_3);
 
 	#define Set_T_XM  	   GPIO_SetBits(GPIOC,GPIO_Pin_2);
@@ -31,13 +32,16 @@ To get your custom, you have to do the following:
 	#define Clr_T_XP 	   GPIO_ResetBits(GPIOA,GPIO_Pin_6);
 
 	#define Set_T_YM    	 GPIO_SetBits(GPIOA,GPIO_Pin_7); 		
-	#define Clr_T_YM 	   GPIO_ResetBits(GPIOA,GPIO_Pin_7);```
+	#define Clr_T_YM 	   GPIO_ResetBits(GPIOA,GPIO_Pin_7);
+	```
 as you can see we use this setting:
 
-	```YP  ->  LCD_WR   ==   C1 Pin in STM32F103RE  
+	```
+	YP  ->  LCD_WR   ==   C1 Pin in STM32F103RE  
 	XM  ->  LCD_RS   ==   C2 Pin in STM32F103RE
 	YM  ->  LCD_D6   ==   A7  Pin in STM32F103RE 
-	XP  ->  LCD_D5   ==   A6  Pin in STM32F103RE ```
+	XP  ->  LCD_D5   ==   A6  Pin in STM32F103RE 
+	```
 
 
 2. You must `GPIO PORT Settings` in this Functions (if you use different ports similar Above):
@@ -51,7 +55,8 @@ as you can see we use this setting:
 3. you must change LCD Ports in	**.\Library\GUI\GUI_X.c** if you dont use this port settings:
 
 	
-	```YP  ->  LCD_WR   ->   C1 Pin in STM32F103RE  
+	```
+	YP  ->  LCD_WR   ->   C1 Pin in STM32F103RE  
 	XM  ->  LCD_RS   ->  C2 Pin in STM32F103RE
 			LCD_CS   ->   C3 Pin in STM32F103RE 
 			LCD_RD   ->   C0 Pin in STM32F103RE 
@@ -86,12 +91,14 @@ as you can see we use this setting:
 	#define LCD_RS_PIN      GPIO_Pin_2
 	#define LCD_WR_PIN      GPIO_Pin_1
 	#define LCD_RD_PIN      GPIO_Pin_0
-	#define LCD_RST_PIN     GPIO_Pin_4```
+	#define LCD_RST_PIN     GPIO_Pin_4
+	```
 
 
 5. you can change the `while` loop as you like:
 
-	```while (1) {
+	```
+	while (1) {
 			GUI_Clear();
 			GUI_SetBkColor(GUI_BLACK);
 			GUI_SetColor(GUI_CYAN);
@@ -111,14 +118,15 @@ as you can see we use this setting:
 			f=(float) TouchScreen_readTouchY();GUI_Delay(300);
 			GUI_DispFloat(f,9);
 		GUI_Delay(300);
-		}```   
+		}
+		```   
 
 
-/**
+
   ******************************************************************************
   * @email    gsh.med.co@gmail.com or elasa.group@gmail.com
   * @author  Soheil sabzevari
   * @version V1.0.0
   * @date    2-March-2019
   * @brief   It is based on one Arduino 2.4 TFT ILI9341 LCD Converted for STM32F013RE in KEIL Software.
-**/ 		
+ 		
