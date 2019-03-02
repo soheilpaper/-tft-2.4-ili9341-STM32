@@ -128,5 +128,5 @@ as you can see we use this setting:
   * @author  Soheil sabzevari
   * @version V1.0.0
   * @date    2-March-2019
-  * @brief   It is based on one Arduino 2.4 TFT ILI9341 LCD Converted for STM32F013RE in KEIL Software.
+  * @brief   It is based on one Arduino 2.4 TFT ILI9341 LCD Converted for STM32F103RE in KEIL Software.
  		
