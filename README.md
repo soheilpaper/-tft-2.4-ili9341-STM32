@@ -8,7 +8,7 @@ SO you could see some information about this filed in this link:
 
 The LCD Runing Photo:
 
-*![Alt text](http://i65.tinypic.com/294o3ld.jpg  " Arduino 2.4 TFT ILI9341 LCD Converted for STM32F103RE ")
+*![Alt text](http://i65.tinypic.com/2utrt6c.jpg  " Arduino 2.4 TFT ILI9341 LCD Converted for STM32F103RE ")
 
 Usage
 -----
