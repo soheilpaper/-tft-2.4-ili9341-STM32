@@ -1,0 +1,9 @@
+.\objects\gui_x_touch_analog.o: Library\GUI\GUI_X_Touch_Analog.c
+.\objects\gui_x_touch_analog.o: .\Library\GUI\incgui\GUI.h
+.\objects\gui_x_touch_analog.o: .\Library\GUI\incgui\GUI_ConfDefaults.h
+.\objects\gui_x_touch_analog.o: .\Library\GUI\GUIConf.h
+.\objects\gui_x_touch_analog.o: .\Library\GUI\incgui\GUI_Type.h
+.\objects\gui_x_touch_analog.o: .\Library\GUI\incgui\LCD.h
+.\objects\gui_x_touch_analog.o: .\Library\GUI\incgui\Global.h
+.\objects\gui_x_touch_analog.o: .\Library\GUI\incgui\GUI_Version.h
+.\objects\gui_x_touch_analog.o: Library\GUI\GUI_X_Touch.h

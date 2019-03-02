@@ -1,0 +1,86 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: µVision V5.14.0.0
+Copyright (C) 2015 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: GSH CO, GSH, LIC=GE745-GF7W2-15FTV-PZWQF-FZ8PS-MAWYH
+ 
+Tool Versions:
+Toolchain:       MDK-ARM Professional  Version: 5.14.0.0
+Toolchain Path:  C:\Keil_v5\ARM\ARMCC\Bin
+C Compiler:      Armcc.exe V5.05 update 1 (build 106)
+Assembler:       Armasm.exe V5.05 update 1 (build 106)
+Linker/Locator:  ArmLink.exe V5.05 update 1 (build 106)
+Library Manager: ArmAr.exe V5.05 update 1 (build 106)
+Hex Converter:   FromElf.exe V5.05 update 1 (build 106)
+CPU DLL:         SARMCM3.DLL V5.14.0.0
+Dialog DLL:      DCM.DLL V1.13.1.0
+Target DLL:      Segger\JL2CM3.dll V2.99.13.0
+Dialog DLL:      TCM.DLL V1.14.4.0
+ 
+<h2>Project:</h2>
+C:\Users\SO\Desktop\trash\stm32\2\18-3 Color LCD - for STM32F103RET -changed startup for new stm32103re new better  working_For ili9320 2.8 tft  COPY SIMPLE add touch\Project.uvproj
+Project File Date:  02/19/2019
+
+<h2>Output:</h2>
+Rebuild target 'STM32F107VC'
+assembling startup_stm32f10x_hd.s...
+compiling core_cm3.c...
+compiling system_stm32f10x.c...
+compiling misc.c...
+compiling stm32f10x_rcc.c...
+compiling stm32f10x_gpio.c...
+compiling stm32f10x_spi.c...
+compiling stm32f10x_adc.c...
+compiling stm32f10x_dma.c...
+compiling main.c...
+.\Library\GUI\ads7843.h(10): warning:  #47-D: incompatible redefinition of macro "__ARMCLIB_VERSION" (declared at line 12 of "C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h")
+  #define __ARMCLIB_VERSION 5060019
+Library\main.c(16): warning:  #1295-D: Deprecated declaration TouchScreen_readPressure - give arg types
+  extern uint16_t TouchScreen_readPressure();
+Library\main.c(17): warning:  #1295-D: Deprecated declaration TouchScreen_readTouchX - give arg types
+  extern uint16_t TouchScreen_readTouchX();
+Library\main.c(18): warning:  #1295-D: Deprecated declaration TouchScreen_readTouchY - give arg types
+  extern uint16_t TouchScreen_readTouchY();
+Library\main.c(403): warning:  #111-D: statement is unreachable
+    xPos = xSize / 2;
+Library\main.c(432): warning:  #1-D: last line of file ends without a newline
+  /*************************** End of file ****************************/
+Library\main.c: 6 warnings, 0 errors
+compiling stm32f10x_it.c...
+compiling GUI_X.c...
+compiling GUI_X_Touch.c...
+Library\GUI\ads7843.h(10): warning:  #47-D: incompatible redefinition of macro "__ARMCLIB_VERSION" (declared at line 12 of "C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h")
+  #define __ARMCLIB_VERSION 5060019
+Library\GUI\GUI_X_Touch.c: 1 warning, 0 errors
+compiling GUIConf.c...
+compiling LCD_X_Config.c...
+compiling LCDConf.c...
+compiling ads7843.c...
+Library\GUI\ads7843.h(10): warning:  #47-D: incompatible redefinition of macro "__ARMCLIB_VERSION" (declared at line 12 of "C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h")
+  #define __ARMCLIB_VERSION 5060019
+Library\GUI\ads7843.c: 1 warning, 0 errors
+compiling GUI_X_Touch_Analog.c...
+compiling ADC_SETUP.c...
+ADC_SETUP.c(136): warning:  #940-D: missing return statement at end of non-void function "Get_ADC_Converted_Value"
+  }
+ADC_SETUP.c(144): warning:  #177-D: variable "GPIO_InitStructure" was declared but never referenced
+      GPIO_InitTypeDef GPIO_InitStructure;
+ADC_SETUP.c(294): warning:  #111-D: statement is unreachable
+      return 0;
+ADC_SETUP.c(295): warning:  #1-D: last line of file ends without a newline
+  }
+ADC_SETUP.c: 4 warnings, 0 errors
+compiling Touchscreen.c...
+Touchscreen.c(126): warning:  #177-D: variable "x" was declared but never referenced
+        uint16_t x,z;
+Touchscreen.c: 1 warning, 0 errors
+linking...
+Program Size: Code=58680 RO-data=32400 RW-data=592 ZI-data=34216  
+FromELF: creating hex file...
+".\Objects\Project.axf" - 0 Error(s), 13 Warning(s).
+</pre>
+</body>
+</html>

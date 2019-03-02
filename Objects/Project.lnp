@@ -1,0 +1,26 @@
+--cpu Cortex-M3
+".\objects\startup_stm32f10x_hd.o"
+".\objects\core_cm3.o"
+".\objects\system_stm32f10x.o"
+".\objects\misc.o"
+".\objects\stm32f10x_rcc.o"
+".\objects\stm32f10x_gpio.o"
+".\objects\stm32f10x_spi.o"
+".\objects\stm32f10x_adc.o"
+".\objects\stm32f10x_dma.o"
+".\objects\main.o"
+".\objects\stm32f10x_it.o"
+".\Library\GUI\GUI_CM3.lib"
+".\objects\gui_x.o"
+".\objects\gui_x_touch.o"
+".\objects\guiconf.o"
+".\objects\lcd_x_config.o"
+".\objects\lcdconf.o"
+".\objects\ads7843.o"
+".\objects\gui_x_touch_analog.o"
+".\objects\adc_setup.o"
+".\objects\touchscreen.o"
+--library_type=microlib --strict --scatter ".\Objects\Project.sct"
+--summary_stderr --info summarysizes --map --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list ".\Project.map" -o .\Objects\Project.axf
