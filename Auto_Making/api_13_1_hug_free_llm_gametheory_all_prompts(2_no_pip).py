@@ -27,6 +27,7 @@ import os
 from pathlib import Path
 
 # Initialize global variables
+global gdrive_fpath 
 gdrive_fpath = '.'
 drive_mounted = False
 local_path = '/content/'
@@ -38,7 +39,7 @@ if mount_gdrive:  # and not drive_mounted:
     gdrive_subdirectory = 'MyDrive/ChatGPT_Paper_wrting'  # @param{type:"string"}
     
     # Declare gdrive_fpath as global before assigning it
-    global gdrive_fpath  
+    #global gdrive_fpath  
     gdrive_fpath = str(Path(gdrive_mountpoint) / gdrive_subdirectory)
     print("gdrive path is:", gdrive_fpath)
 
