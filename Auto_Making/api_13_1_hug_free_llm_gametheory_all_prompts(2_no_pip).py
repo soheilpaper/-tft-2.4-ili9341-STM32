@@ -6849,7 +6849,7 @@ class Auto_Main():
      #TOPIC_CLASS() == topic
      return last_step_result,topic.category["perviuse_try_numner"],topic.category["results"]
 
-response = Auto_Main().for_each_category(TOPIC_CLASS().category["main_variables"]) #prompts,prompts_topic,
+#response = Auto_Main().for_each_category(TOPIC_CLASS().category["main_variables"]) #prompts,prompts_topic,
 
 """To use the `linkedin-auto-post` library in your Python script, you first need to install it using pip:
 
@@ -7059,7 +7059,8 @@ def main_0():
            break
 
 if __name__ == "__main__":
-   main_0()
+   #main_0()
+   response = Auto_Main().for_each_category(TOPIC_CLASS().category["main_variables"]) #prompts,prompts_topic
 
 """#Creating the sound by OpenAI: 👇👇
 
