@@ -47,8 +47,9 @@ if mount_gdrive : # and not drive_mounted:
     else:
           print("Drive is already mounted.")
 else:
-   Folder_fpath ='/tmp/' #@param{type:"string"}
-   content = Folder_fpath
+   Folder_fpath ='/content/' #@param{type:"string"}
+   content= Folder_fpath
+   os.mkdirs(Folder_fpath
    #gdrive_subdirectory = 'MyDrive/ChatGPT_Paper_wrting' #@param{type:"string"}
    gdrive_fpath = Folder_fpath
    os.chdir(gdrive_fpath)
@@ -7160,7 +7161,8 @@ def extract_course_information(course_design_variables):
    course_parts = course_description.split('\n')
 
    return course_parts, doc
-
+    
+@retry_with_exponential_backoff
 def generate_voice(course_parts, TOPIC):
    TOPIC_S = slugify(TOPIC)
    Sound_Folder = folder_path+f"{TOPIC[:15]}_T/sound_/"
@@ -7169,9 +7171,9 @@ def generate_voice(course_parts, TOPIC):
        os.makedirs(Sound_Folder)
 
    audio_files = []
-   @retry_with_exponential_backoff
+   #@retry_with_exponential_backoff
    for i, part in enumerate(course_parts):
-       # Generate voice from the part
+       # Generate voice from the p
        response = client.audio.speech.create(    voice="alloy",
          #model="Kamtera/persian-tts-female-glow_tts", #model="tts-1",
          model="tts-1",
