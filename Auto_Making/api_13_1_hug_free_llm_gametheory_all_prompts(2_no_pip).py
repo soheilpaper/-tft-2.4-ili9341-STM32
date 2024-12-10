@@ -5475,8 +5475,7 @@ if not os.path.exists("/root/.ipython/ocr.py"):
     from subprocess import run
     from shlex import split
 
-    shellCmd = "wget -qq https://raw.githubusercontent.com/biplobsd/OneClickRun/master/res/ocr.py \
-                    -O /root/.ipython/ocr.py"
+    shellCmd = "wget -qq https://raw.githubusercontent.com/biplobsd/OneClickRun/master/res/ocr.py -O /root/.ipython/ocr.py"
     run(split(shellCmd))
 from ocr import runSh
 
