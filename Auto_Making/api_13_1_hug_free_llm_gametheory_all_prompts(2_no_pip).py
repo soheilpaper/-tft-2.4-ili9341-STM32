@@ -6851,6 +6851,11 @@ class Auto_Main():
 
 #response = Auto_Main().for_each_category(TOPIC_CLASS().category["main_variables"]) #prompts,prompts_topic,
 
+if __name__ == "__main__":
+   #main()
+   response = Auto_Main().for_each_category(TOPIC_CLASS().category["main_variables"])
+
+
 """To use the `linkedin-auto-post` library in your Python script, you first need to install it using pip:
 
 ```python
