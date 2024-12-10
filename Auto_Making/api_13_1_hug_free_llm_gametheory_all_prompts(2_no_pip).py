@@ -53,6 +53,7 @@ else:
    os.chdir(gdrive_fpath)
 folder_path = gdrive_fpath
 
+'''
 #!pip uninstall openai -y
 #!pip install openai # ==0.28
 
@@ -180,7 +181,7 @@ https://colab.research.google.com/github/sudo-ken/Mega-to-Google-Drive/blob/mast
 !mkdir '/content/ChatGPT_academic_paper'
 # %cd '/content/ChatGPT_academic_paper'
 !echo 't' >> t.txt
-
+'''
 #pipeline.to("cuda") #"cuda")
 
 from diffusers import DiffusionPipeline
@@ -6973,7 +6974,7 @@ In this code, replace `<Your Email>` and `<Your Password>` with your actual Link
 
 Please note that automating LinkedIn posts might violate LinkedIn's terms of service. Always ensure that your actions comply with LinkedIn's rules and regulations.
 """
-
+'''
 !pip install linkedin-content-uploader
 !git clone https://github.com/datakund/linkedin-post-content-python.git
 
@@ -7020,7 +7021,7 @@ https://colab.research.google.com/github/xhluca/dl-translate/blob/main/demos/col
 
 
 !pip install -q dl-translate
-
+'''
 from linkedin_content_uploader import *
 import linkedin_json_data
 import text_content_generator
@@ -7028,7 +7029,7 @@ import linkedin_prompts
 import text_getter
 import time
 
-def main():
+def main_0():
    file_path = "linkedin_topic.txt" # Replace with the actual file path
    current_line = 0
 
@@ -7058,7 +7059,7 @@ def main():
            break
 
 if __name__ == "__main__":
-   main()
+   main_0()
 
 """#Creating the sound by OpenAI: 👇👇
 
