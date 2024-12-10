@@ -6867,7 +6867,7 @@ def main():
     date = st.date_input("Date", value=pd.to_datetime("2023-12-24"))  # Ensure pd is defined
 
     # Button to trigger processing
-    if True : #st.button("Process"):
+    if st.button("Process"):
         # Call the Auto_Main function and capture the response
         response = Auto_Main().for_each_category(TOPIC_CLASS().category["main_variables"])
 
