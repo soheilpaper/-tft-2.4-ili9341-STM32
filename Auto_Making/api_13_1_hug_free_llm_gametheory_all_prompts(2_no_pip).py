@@ -29,6 +29,7 @@ from pathlib import Path
 # Initialize global variables
 global gdrive_fpath
 global TOPIC_CLASS
+global k
 gdrive_fpath = '.'
 drive_mounted = False
 local_path = '/content/'
@@ -6363,7 +6364,7 @@ client = OpenAI(
 )
 
 
-global k
+#global k
 k=0
 
 from sumy.parsers.plaintext import PlaintextParser
