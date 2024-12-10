@@ -49,7 +49,7 @@ if mount_gdrive : # and not drive_mounted:
 else:
    Folder_fpath ='/content/' #@param{type:"string"}
    content= Folder_fpath
-   os.mkdirs(Folder_fpath
+   os.mkdirs(Folder_fpath)
    #gdrive_subdirectory = 'MyDrive/ChatGPT_Paper_wrting' #@param{type:"string"}
    gdrive_fpath = Folder_fpath
    os.chdir(gdrive_fpath)
