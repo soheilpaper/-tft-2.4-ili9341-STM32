@@ -27,7 +27,8 @@ import os
 from pathlib import Path
 
 # Initialize global variables
-global gdrive_fpath 
+global gdrive_fpath
+global TOPIC_CLASS
 gdrive_fpath = '.'
 drive_mounted = False
 local_path = '/content/'
@@ -4507,7 +4508,7 @@ print ('\n main variable is :', main_variables_0)
 folder_chatGPT = f"/{content}/ChatGPT_academic_paper"
 #openai_api_0 = "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"
 #openai_api = "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"
-global TOPIC_CLASS,gdrive_fpath
+#global TOPIC_CLASS,gdrive_fpath
 
 
 class TOPIC_CLASS:
