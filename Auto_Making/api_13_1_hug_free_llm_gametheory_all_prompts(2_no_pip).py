@@ -6851,9 +6851,41 @@ class Auto_Main():
 
 #response = Auto_Main().for_each_category(TOPIC_CLASS().category["main_variables"]) #prompts,prompts_topic,
 
+import streamlit as st
+import pandas as pd  # Importing pandas to handle date inputs
+#from your_module import Auto_Main, TOPIC_CLASS  # Replace with your actual module name
+
+def main():
+    st.title("Dark Triad Management Study")
+
+    # Input fields for user parameters
+    topic = st.text_input("Topic", "Dark Triad and its management through conversation and charity")
+    research_domain = st.text_input("Research Domain", "Psychology")
+    paragraph = st.text_area("Paragraph", 
+        "The Dark Triad, which consists of Machiavellianism, narcissism, and psychopathy, has been the focus of various studies...")
+    action = st.text_input("Action", "Study and discussion")
+    date = st.date_input("Date", value=pd.to_datetime("2023-12-24"))  # Ensure pd is defined
+
+    # Button to trigger processing
+    if True : #st.button("Process"):
+        # Call the Auto_Main function and capture the response
+        response = Auto_Main().for_each_category(TOPIC_CLASS().category["main_variables"])
+
+        # Display the response in a structured format
+        st.success("Processing completed!")
+
+        # Assuming response is a dictionary or similar structure
+        if isinstance(response, dict):
+            for key, value in response.items():
+                st.subheader(key)
+                st.write(value)
+        else:
+            st.write(response)  # Fallback for other types
+
 if __name__ == "__main__":
-   #main()
-   response = Auto_Main().for_each_category(TOPIC_CLASS().category["main_variables"])
+    main()
+
+   #response = Auto_Main().for_each_category(TOPIC_CLASS().category["main_variables"])
 
 
 """To use the `linkedin-auto-post` library in your Python script, you first need to install it using pip:
