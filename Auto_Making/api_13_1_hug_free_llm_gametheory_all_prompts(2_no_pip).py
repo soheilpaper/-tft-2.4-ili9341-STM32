@@ -47,7 +47,8 @@ if mount_gdrive : # and not drive_mounted:
     else:
           print("Drive is already mounted.")
 else:
-   Folder_fpath ='/content/' #@param{type:"string"}
+   Folder_fpath ='/tmp/' #@param{type:"string"}
+   content = Folder_fpath
    #gdrive_subdirectory = 'MyDrive/ChatGPT_Paper_wrting' #@param{type:"string"}
    gdrive_fpath = Folder_fpath
    os.chdir(gdrive_fpath)
@@ -3276,8 +3277,10 @@ import os
 import random
 import slugify
 
-folder_path = "/content/drive/My Drive/ChatGPT_Paper_wrting/All_Reports/"
-
+#folder_path_allreport=  "/content/drive/My Drive/ChatGPT_Paper_wrting/All_Reports/"
+folder_path_allreport= f"/{content}/drive/My Drive/ChatGPT_Paper_wrting/All_Reports/"
+folder_path = folder_path_allreport
+os.makedirs(folder_path)
 
 
 def generate_voice(course_data, TOPIC):
@@ -3317,7 +3320,7 @@ def generate_voice(course_data, TOPIC):
     out.write(response.audio_content)
 
 # Example Usage
-course_filename = "/content/drive/MyDrive/ChatGPT_Paper_wrting/All_Reports/Climate Change _T/Pitch_Deck/Title/Pitch_Deck_T_climate-change-_t.docx" # "path_to_your_file.docx"
+course_filename = f"/{content}/drive/MyDrive/ChatGPT_Paper_wrting/All_Reports/Climate Change _T/Pitch_Deck/Title/Pitch_Deck_T_climate-change-_t.docx" # "path_to_your_file.docx"
 course_design_variables = {"filename": course_filename}
 #TOPIC = "Your Topic"
 
@@ -3445,7 +3448,7 @@ def generate_voice(course_parts, TOPIC):
     extended_audio.export(Sound_Folder+"extended.mp3", format='mp3')
   combined_audio.export(Sound_Folder+"combined.mp3", format='mp3')
 
-course_filename = "/content/drive/MyDrive/ChatGPT_Paper_wrting/All_Reports/Climate Change _T/Pitch_Deck/Title/Pitch_Deck_T_climate-change-_t.docx"
+course_filename = f"/{content}/drive/MyDrive/ChatGPT_Paper_wrting/All_Reports/Climate Change _T/Pitch_Deck/Title/Pitch_Deck_T_climate-change-_t.docx"
 course_design_variables = {"filename": course_filename}
 #course_parts, doc,sumerized_content = extract_course_information(course_design_variables)
 #generate_voice(sumerized_content, TOPIC)
@@ -4495,7 +4498,7 @@ f". LinkedIn Post about this Report:",
 ]
 
 print ('\n main variable is :', main_variables_0)
-folder_chatGPT = "/content/ChatGPT_academic_paper"
+folder_chatGPT = f"/{content}/ChatGPT_academic_paper"
 #openai_api_0 = "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"
 #openai_api = "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"
 global TOPIC_CLASS,gdrive_fpath
@@ -7104,7 +7107,8 @@ if __name__ == "__main__":
 https://platform.openai.com/docs/guides/text-to-speech
 """
 
-!mkdir "/content/ChatGPT_academic_paper"
+#!mkdir "/content/ChatGPT_academic_paper"
+os.mkdir(f"/{content}/ChatGPT_academic_paper")
 from openai import OpenAI
 from django.utils.text import slugify
 
