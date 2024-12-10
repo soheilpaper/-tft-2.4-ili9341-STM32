@@ -20,39 +20,43 @@ https://acagpt.site.live/editv2/
 https://github.com/ahmetbersoz/chatgpt-prompts-for-academic-writing
 """
 
+
+
 from google.colab import drive
 import os
 from pathlib import Path
 
-global gdrive_fpath
-drive_mounted = False
+# Initialize global variables
 gdrive_fpath = '.'
+drive_mounted = False
 local_path = '/content/'
 
-mount_gdrive = True # @param{type:"boolean"}
-if mount_gdrive : # and not drive_mounted:
-    from google.colab import drive
+mount_gdrive = True  # @param{type:"boolean"}
 
-    gdrive_mountpoint = '/content/drive/' #@param{type:"string"}
-    gdrive_subdirectory = 'MyDrive/ChatGPT_Paper_wrting' #@param{type:"string"}
+if mount_gdrive:  # and not drive_mounted:
+    gdrive_mountpoint = '/content/drive/'  # @param{type:"string"}
+    gdrive_subdirectory = 'MyDrive/ChatGPT_Paper_wrting'  # @param{type:"string"}
+    
+    # Declare gdrive_fpath as global before assigning it
+    global gdrive_fpath  
     gdrive_fpath = str(Path(gdrive_mountpoint) / gdrive_subdirectory)
-    print ("gdrive path is :",gdrive_fpath)
-   # Mount Google Drive
+    print("gdrive path is:", gdrive_fpath)
+
+    # Mount Google Drive if not already mounted
     if not os.path.isdir(gdrive_mountpoint):
-     # If not, mount the drive
-       drive.mount(gdrive_mountpoint)
-       if not os.path.exists(gdrive_fpath):
-          os.makedirs(gdrive_fpath)
-          os.chdir(gdrive_fpath)
+        drive.mount(gdrive_mountpoint)
+        if not os.path.exists(gdrive_fpath):
+            os.makedirs(gdrive_fpath)
+            os.chdir(gdrive_fpath)
     else:
-          print("Drive is already mounted.")
+        print("Drive is already mounted.")
 else:
-   Folder_fpath ='/content/' #@param{type:"string"}
-   content= Folder_fpath
-   os.mkdirs(Folder_fpath)
-   #gdrive_subdirectory = 'MyDrive/ChatGPT_Paper_wrting' #@param{type:"string"}
-   gdrive_fpath = Folder_fpath
-   os.chdir(gdrive_fpath)
+    Folder_fpath = '/content/'  # @param{type:"string"}
+    content = Folder_fpath
+    os.makedirs(Folder_fpath, exist_ok=True)  # Corrected to use makedirs instead of mkdirs
+    gdrive_fpath = Folder_fpath
+    os.chdir(gdrive_fpath)
+
 folder_path = gdrive_fpath
 
 '''
